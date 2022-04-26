@@ -1,32 +1,54 @@
 import React, { Component } from "react";
-import { Card, Table } from "react-bootstrap";
+
+import { Card, Form, Button } from "react-bootstrap";
 
 class BookList extends Component {
   render() {
     return (
-      <div className="text-white">
+      <div>
         <Card className={"border border-dark bg-dark text-white"}>
-          <Card.Header>
-            <strong>Book List</strong>
-          </Card.Header>
+          <Card.Header>Login</Card.Header>
           <Card.Body>
-            <Table className="text-white" bordered hover striped variant="dark">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Author</th>
-                  <th>ISBN Number</th>
-                  <th>Price</th>
-                  <th>Language</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colSpan={6}>No Books Available</td>
-                </tr>
-              </tbody>
-            </Table>
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  className={"bg-dark text-white"}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter first name"
+                  className={"bg-dark text-white"}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter last name"
+                  className={"bg-dark text-white"}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  className={"bg-dark text-white"}
+                />
+              </Form.Group>
+              <center>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </center>
+            </Form>
           </Card.Body>
         </Card>
       </div>

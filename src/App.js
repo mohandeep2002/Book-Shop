@@ -17,7 +17,7 @@ function App() {
         <NavigationBar />
         <Container>
           <Row>
-            <Col lg={12} style={marginTop}>
+            <Col style={marginTop}>
               <Switch>
                 <Route path="/" exact component={Welcome}></Route>
                 <Route path="/add" exact component={Book}></Route>

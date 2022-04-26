@@ -9,17 +9,17 @@ class NavigationBar extends React.Component {
         <Navbar bg="dark" variant="dark">
           <Container>
             <Link to={""} className="navbar-brand">
-              Book Shop
+              KL Bank
             </Link>
             <Nav className="me-auto">
               {/* <Nav.Link>
                 <Link to={"add"}>Add Book</Link>
               </Nav.Link> */}
               <Nav.Link as={Link} to={"/add"}>
-                Add Book
+                Create An Account
               </Nav.Link>
               <Nav.Link as={Link} to={"/list"}>
-                Book List
+                Login
               </Nav.Link>
             </Nav>
           </Container>

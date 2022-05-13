@@ -1,15 +1,23 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 
 import { Card, Form, Button } from "react-bootstrap";
 
 class BookList extends Component {
+  componentDidMount() {
+    window.location.href = "https://google.com/contact";
+  }
+  LoginNewPage = () => {
+    useEffect(() => {
+      window.location.href = "https://www.google.com/contact";
+    });
+  };
   render() {
     return (
       <div>
         <Card className={"border border-dark bg-dark text-white"}>
           <Card.Header>Login</Card.Header>
           <Card.Body>
-            <Form>
+            <Form onSubmit={this.LoginNewPage} id="recordid">
               <Form.Group className="mb-3">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
